@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller</title>
+    <link rel="stylesheet" href="EstilosW.css">
+</head>
+<body>
+   <center><h1 class="titulos" >Taller de JavaScript</h1></center>
+    <h2 class="preguntas">1.¿Qué es JavaScript?</h2>
+    <p class="texto" >JavaScript es un lenguaje de programacion que sirve para darle distintos tipos de
+        funciones o animaciones a nuestra pagina web , como darle vida a ella misma.</p>
+
+    <h2  class="preguntas">	2. Variables y tipos de datos (exprese ejemplos)  </h2>
+    <p class="texto"> En JavaScript existen 5 tipos de variables, Varibles de texto, numeros ,booleanas ,listas y objetos.
+    </p>
+<p class="texto" >Las Variables de texto , sirven para almacenar cadenas de caracteres , 
+    osea letras, siempre escritas dentro de comillas dobles o simples.
+    Introducir numeros solo hara que estos se concatenen y no realizan ninguna funcion aritmetica si es que lo
+    deseamos.</p>
+<p class="Revisar">(Revisar Codigo)</p>
+    <script>
+var textoA ="Texto de ejemplo con comillas dobles"
+var textoB  =' Texto de ejemplo con comillas simples'
+var textoC  =" Texto de ejemplo con 'comillas dobles y simples'"
+
+document.write ( textoA); //Devuelve el texto en la variable A//
+document.write ( textoB); //Devuelve el texto en la variable B//
+document.write ( textoC); //Devuelve el texto en la variable C//
+    </script>
+
+<p class="texto" >Las Variables numericas sirven para colocar valores numericos y que estos
+    puedan efectuar su operacion aritmetica si es que se desea, diferenciandose de que estas no llevan
+    comillas</p>
+<p class="Revisar">(Revisar Codigo)</p>
+
+<script>
+var x,y;
+x=5;
+y=6;
+document.write (x+y); //Devuelve 11//
+</script>
+
+<p class="texto">Las variables de tipo booleano almacenan dos tipos de datos , siendo estos false o true,
+    que pueden valer 0 y 1</p>
+    <p class="Revisar">(Revisar Codigo)</p>
+<script>
+var l,o;
+
+l=true
+o=false
+document.write (l && o); //Devuelve False//
+</script>    
+<p class="texto">Las variables listas son un tipo especial de objeto que almacena un inventario de contenidos 
+    ordenados que pueden ser de cualquier tipo de variable.
+    Una lista puede almacenar texto, números, booleanas, otras listas y objetos. </p>
+    <p class="Revisar">(Revisar Codigo)</p>
+
+    <script>
+
+var nombre =("Francesc");
+var macedonia =["poma","pera",33, nombre , true, , "Barcelona" ]
+document.write (macedonia[0]) //Devuelve poma//
+    </script>
+
+<p class="texto">Los objetos son variables que nos ayudan a almacenar diversas propiedades. 
+    Pueden almacenar cualquier tipo de variable: 
+    texto, números, listas, booleanos, otros objetos e incluso funciones.
+    Para acceder al valor almacenado en una propiedad de un objeto devemos escribir «persona.nombrePropiedad»
+    Una particularidad muy importante es que los objetos no necesitan tener sus propiedades ordenadas.</p>
+    <p class="Revisar">(Revisar Codigo)</p>
+
+    <script>
+var persona = {nombre:"Salvador",
+appellido:"Ricart",
+aficiones:["Html,css,javascript"],
+inscrito:1
+}
+
+document.write(persona.nombre); //Devuelve Salvador
+</script>
+
+<h2 class="preguntas" >3.En JavaScript, se declaran variables utilizando la palabra clave let, const (introducida en ECMAScript 6) o var (forma antigua, no se recomienda su uso). Exprese ejemplos y diga porque no se tiene tan en cuenta la palabra reservada var.</h2>
+
+<p class="texto"> La palabra reservada var no se tiene tan en cuenta para definir variables actualmente
+    grasias a la existencia de let y const , ya que var definia una variable que funcionaba de manera global en el codigo
+    impidiendo que se puedieran usar en ciertas partes del codigo de manera especifica, obligando a crear variables
+    distintas para un mismo codigo, ademas de soportar buscadores viejos.</p>
+    <p class="Revisar">(Revisar Codigo)</p>
+
+    <script>
+var edad = 27
+if (edad) {
+ //Necesitamos que var dobleDeEdad exista solamente en este bloque de código dentro de las llaves//
+    var dobleDeEdad = edad + edad
+    document.write(`El doble de tu edad actual es ${dobleDeEdad}`)
+}
+
+dobleDeEdad
+54
+//Nuestra var dobleDeEdad está disponible por fuera de estas llaves, en el ámbito global//
+
+/*En este ejemplo usamos la palabra reservada function para definir una variable que solo 
+funcione en esta parte del codigo, por ello nos dara un error si lo ejecutamos ya que la variable
+se encuentra solo disponible dentro del function y no en todo el codigo*/
+
+function imprimirAño() {
+ var año = 2023;
+}
+document.write(año);
+    </script>
+
+    <h2 class="preguntas" >4. Explicar los operadores aritméticos, de asignación y de comparación, Mostrar ejemplos de uso de operadores en expresiones JavaScript.
+    </h2>
+
+<p class="texto">Un operador aritmético toma valores numéricos (ya sean literales o variables) 
+    como sus operandos y devuelve un solo valor numérico.
+    Los operadores aritméticos estándar son suma (+), resta (-), multiplicación (*) y división (/).</p>
+    <p class="Revisar">(Revisar Codigo)</p>
+    <script>
+        document.write (1/2); // 0.5
+    </script>
+
+    <p class="texto">Ademas javascript proporciona diversos operadores. <br>
+        *Residuo (%) <br>
+        *Incremento (++) <br>
+        *Decremento (--) <br>
+        *Negación unaria (-) <br>
+        *Positivo unario (+) <br>
+        *Operador de exponenciación (**)</p>
+
+<p class="texto"> Un operador de comparación compara sus operandos y devuelve un valor lógico en 
+    función de si la comparación es verdadera (true) o falsa (false). 
+    Los operandos pueden ser valores numéricos, de cadena, lógicos u objetos.</p>
+     
+   <p class="texto">Javascript nos proporciona diversos operadores para la ocasion que necesitemos. <br>
+    
+    *Igual (==) <br>
+    *No es igual (!=) <br>
+    *Estrictamente igual (===) <br>
+    *Desigualdad estricta (!==) <br>
+    *Mayor que (>) <br>
+    *Mayor o igual que (>=) <br>
+    *Menor que (">") <br>
+    *Menor o igual ("<=") <br> 
+</p> 
+
+<p class="texto"> Un operador de asignación asigna un valor a su operando izquierdo basándose en el valor de su operando derecho. 
+    El operador de asignación simple es igual (=), que asigna el valor de su operando derecho a 
+    su operando izquierdo. Es decir, x = y asigna el valor de y a x.
+    </p>
+    
+<p class="texto">
+    *Asignación	x = y	x = y<br>
+    *Asignación de adición	x += y 	x = x + y<br>
+    *Asignación de resta	x -= y	x = x - y<br>
+    *Asignación de multiplicación	x *= y	x = x * y<br>
+    *Asignación de división	x /= y	x = x / y<br>
+    *Asignación de residuo	x %= y	x = x % y<br>
+    *Asignación de exponenciación	x **= y	x = x ** y<br>
+    *Asignación de desplazamiento a la izquierda	x <<= y0	x = x << y<br>
+    *Asignación de desplazamiento a la derecha	x >>= y	x = x >> y<br>
+    *Asignación de desplazamiento a la derecha sin signo	x >>>= y	x = x >>> y<br>
+    *Asignación AND bit a bit	x &= y	x = x & y<br>
+    *Asignación XOR bit a bit	x ^= y	x = x ^ y<br>
+    *Asignación OR bit a bit	x |= y	x = x | y <br>
+    *Asignación AND lógico	x &&= y	x && (x = y)<br>
+    *Asignación OR lógico	x ||= y	x || (x = y)<br>
+    *Asignación de anulación lógica	x ??= y	x ?? (x = y) <br>
+</p>
+<h2 class="preguntas" >5.Presentar las estructuras de control: condicionales (if, else if, else) y bucles (for, while), mostrar ejemplos prácticos de cómo utilizar estas estructuras para controlar el flujo de ejecución del programa.
+</h2>
+
+<p class="texto" >La condiciones nos sirven para tomar distintas decisiones en un codigo y que pasaria despues de ello
+    ejecutando un codigo distinto en estos casos, usando el if como nuestras opciones y el else si se 
+    escoje una u otra</p>
+   
+    <p class="Revisar">(Revisar Codigo)</p>
+
+    <script>
+let compraRealizada = false;
+
+if (compraRealizada === true) {
+  let subsidioAdicional = 10;
+} else {
+  let subsidioAdicional = 5;
+}
+    </script>
+
+    <p class="texto">El else if sirve para agregar mas de dos opciones, como 3 o hasta 5</p>
+    
+    <label for="clima">Seleccione el tipo de clima de hoy: </label>
+<select id="clima">
+  <option value="">--Haga una elección--</option>
+  <option value="soleado">Soleado</option>
+  <option value="lluvioso">Lluvioso</option>
+  <option value="nevando">Nevando</option>
+  <option value="nublado">Nublado</option>
+</select>
+
+<p></p>
+
+<script>
+let seleccionar = document.querySelector('select');
+let parrafo = document.querySelector('p');
+
+seleccionar.addEventListener('change', establecerClima);
+
+function establecerClima() {
+  let eleccion = seleccionar.value;
+
+  if (eleccion === 'soleado') {
+    parrafo.textContent = 'El día esta agradable y soleado hoy. ¡Use pantalones cortos! Ve a la playa o al parque y come un helado.';
+  } else if (eleccion === 'lluvioso') {
+    parrafo.textContent = 'Está lloviendo, tome un abrigo para lluvia y un paraguas, y no se quede por fuera mucho tiempo.';
+  } else if (eleccion === 'nevando') {
+    parrafo.textContent = 'Está nevando ─ ¡está congelando! Lo mejor es quedarse en casa con una taza caliente de chocolate, o hacer un muñeco de nieve.';
+  } else if (eleccion === 'nublado') {
+    parrafo.textContent = 'No está lloviendo, pero el cielo está gris y nublado; podría llover en cualquier momento, así que lleve un saco solo por si acaso.';
+  } else {
+    parrafo.textContent = '';
+  }
+}
+    
+</script>
+<p class="texto" >Do While ,la sentencia (hacer mientras) crea un bucle que ejecuta una sentencia especificada, 
+    hasta que la condición de comprobación se evalúa como falsa. 
+    La condición se evalúa después de ejecutar la sentencia, dando como resultado que 
+    la sentencia especificada se ejecute al menos una vez.</p>
+    <p class="Revisar">(Revisar Codigo)</p>
+    <script>
+        do {
+   i += 1;
+   document.write(i);
+} while (i < 5);
+    </script>
+
+<p class="texto" >For ,crea un bucle que consiste en tres expresiones opcionales, encerradas en paréntesis y 
+    separadas por puntos y comas, seguidas de una sentencia ejecutada en un bucle.</p>
+    <p class="Revisar">(Revisar Codigo)</p>
+    <script>
+for (var i = 0; i < 9; i++) {
+  n += i;
+  mifuncion(n);
+}
+ </script>
+
+<h2 class="preguntas" >6.Entregue al menos 3 ejemplos usando funciones en JavaScript y su importancia para reutilizar código.
+</h2>
+<p class="Revisar">(REVISAR CODIGO)</p>
+<p class="texto">Ejemplos con Javascript</p>
+
+<p class="texto">Mensaje de Bienvenida</p>
+
+<script>
+    alert("Bienvenido a la Pagina");
+</script>
+
+<p class="texto" >Recojer datos del teclado</p>
+<script>
+
+ var nom;
+nom=prompt("Escribe tu nombre");
+alert("Hola " ,nom);
+</script>
+
+<p class="texto" >Confirmacion de una Pagina </p>
+<script>
+function Confirmacion(){
+return confirm ("Quieres ir a Youtube");
+}
+</script>
+
+<a href="https://www.youtube.com/" onclick="return Confirmacion()">Youtube</a>
+
+<p class="texto" >Siempre es importante ahorrar en codigo de distintas formas , ya que con esto nos facilitamos la
+    vida al seguir con el mismo , ademas de aligerar la carga que debe de realizar el computador
+    al cargar grandes cantidades de codigo que puede llegar a ser obsoleto</p>
+</body>
+</html>
