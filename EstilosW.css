@@ -8,3 +8,13 @@ background-color: burlywood;
 border-radius: 10px;}
 
 .Revisar {color: green;}
+
+.mini {font-size: large;
+background-color: cornsilk;}
+
+.volver {background-color: chartreuse;
+font-family: 'Times New Roman', Times, serif;
+border-color: green;
+border-radius: 10px;}
+
+.volver:hover {background-color: red;}

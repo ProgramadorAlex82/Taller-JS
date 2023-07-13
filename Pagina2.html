@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="EstilosW.css">
+</head>
+<body>
+<nav>
+    <a class="volver" href="index.html">Volver</a>
+</nav>
+   <center> <h2 class="preguntas" >Cada uno de los codigos debe de ir dentro de un script</h2></center>
+   <center> <h1 class="titulos" >Codigo del Texto</h1> </center>
+
+<center><p class="mini" >
+var textoA ="Texto de ejemplo con comillas dobles" <br>
+var textoB ='Texto de ejemplo con comillas simples'<br>
+var textoC ="'Texto de ejemplo con 'comillas dobles y simples'" <br>
+
+document.write ( textoA);  <br>
+document.write ( textoB);  <br>
+document.write ( textoC);  <br></p></center>
+ <center><p class="mini" >Cada uno de los document.write devolvera el texto correspondiente a su variable.</p></center>
+
+ <center> <h1 class="titulos" >Codigo Numerico</h1> </center>
+
+<center><p class="mini" >
+    var x,y; <br>
+    x=5;<br>
+    y=6;<br>
+    document.write (x+y); <br> </p></center>
+
+    <center><p class="mini" >El document.write nos devolvera la suma de las dos variables , siendo en este caso 11 </p></center> 
+
+    <center> <h1 class="titulos" >Codigo booleano</h1> </center>
+
+    <center><p class="mini" >
+        var l,o; <br>
+        l=true <br>
+        o=false <br>
+        document.write (l && o); <br></p></center>
+
+        <center><p class="mini" >El document.write nos devolvera false, dependiendo que operador de asignación tenga, en este caso usamos el &&( AND )</p></center>
+
+        <center><h1 class="titulos">Codigo Listas </h1></center>
+
+        <center><p class="mini" >
+    var nombre =("Francesc"); <br>
+    var macedonia =["poma","pera",33, nombre , true, , "Barcelona" ] <br>
+    document.write (macedonia[0]) <br> </p></center>
+
+    <center><p class="mini" >El document.write nos devolvera "poma", ya que la lista revisara en la variable macedonia por la posicion 0.   </p></center>
+    
+<center><h1 class="titulos" >Codigo Objetos</h1></center>
+
+<center><p class="mini" >
+    var persona = {nombre:"Salvador", <br>
+    appellido:"Ricart", <br>
+    aficiones:["Html,css,javascript"], <br>
+    inscrito:1 <br>
+}
+    
+    document.write(persona.nombre); <br> </p></center>
+
+    <center><p class="mini" >El document.write nos "devolvera Salvador" ;) , ya que se revisara la variable persona en la posicion nombre.   </p></center>
+
+
+</body>
+</html>
